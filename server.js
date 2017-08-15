@@ -27,18 +27,23 @@ var content=
     
 };
 
-var htmlTemplate ='
-<html>
-    <head>
+function createTemplate(data){
+    var title = data.title;
+    var heading= data.heading;
+    var date= data.date;
+    var content= data.content;
+    var htmlTemplate =
+    <html>
+        <head>
         <title>
             ${tite}
         </title>
         <meta name="viewport" content="width=device-width, initial scale=1"/>
         <style>
              <link href="/ui/style.css" rel="stylesheet" />
-</style>
-    </head>
-    <body>
+        </style>
+        </head>
+        <body>
         <div class= "container">
           <div>
             <a href= "/"> Home</a>
@@ -53,17 +58,13 @@ var htmlTemplate ='
             <div>
                <p>
                ${content}
-        </div>
-        </div>
-    </body>
-</html>
+            </div>
+            </div>
+         </body>
+   </html>;
+}
 
-
-
-;'
-
-
-
+return htmlTemplate;
 
 
 
@@ -76,7 +77,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'Article1.html'));
+ res.send(createTemplate(articleone));
 });
 
 app.get('/article-two', function (req, res) {
