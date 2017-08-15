@@ -17,14 +17,50 @@ var content=
                 This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.
                </p> 
                <p>
-                This is article one.This is article one.This is article one.This is article one.This is article one.This is article one .This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.
+                This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.
                </p> 
                <p>
                 This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.This is article one.
-               </p>
+              </p>
+    
+    
+    
 };
 
+var htmlTemplate ='
+<html>
+    <head>
+        <title>
+            ${tite}
+        </title>
+        <meta name="viewport" content="width=device-width, initial scale=1"/>
+        <style>
+             <link href="/ui/style.css" rel="stylesheet" />
+</style>
+    </head>
+    <body>
+        <div class= "container">
+          <div>
+            <a href= "/"> Home</a>
+           </div>
+           <hr/>
+           <h>
+            ${heading}
+            </h>
+            <div>
+             ${date}
+            </div>
+            <div>
+               <p>
+               ${content}
+        </div>
+        </div>
+    </body>
+</html>
 
+
+
+;'
 
 
 
