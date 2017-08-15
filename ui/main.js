@@ -14,7 +14,7 @@ element.innerHTML='new value';
 var img= document.getElementById('pic');
 var leftMargin=0;
 function moveRight(){
-    leftMargin=leftMargin+10;
+    leftMargin=leftMargin+50;
     img.style.leftMargin=leftMargin+ "px";
 }
 img.onclick= function(){
