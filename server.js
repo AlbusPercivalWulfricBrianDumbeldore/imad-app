@@ -28,6 +28,7 @@ var articleone={
 };
 
 function createTemplate(data){
+    
     var title = data.title;
     var heading= data.heading;
     var date= data.date;
@@ -35,22 +36,22 @@ function createTemplate(data){
     var htmlTemplate =
     `<html>
         <head>
-        <title>
+            <title>
             ${tite}
-        </title>
-        <meta name="viewport" content="width=device-width, initial scale=1"/>
-        <style>
-             <link href="/ui/style.css" rel="stylesheet" />
-        </style>
-        </head>
-        <body>
-        <div class= "container">
-          <div>
+            </title>
+             <meta name="viewport" content="width=device-width, initial scale=1"/>
+              <style>
+                <link href="/ui/style.css" rel="stylesheet" />
+             </style>
+            </head>
+             <body>
+             <div class= "container">
+            <div>
             <a href= "/"> Home</a>
-           </div>
-           <hr/>
-           <h>
-            ${heading}
+            </div>
+             <hr/>
+             <h>
+             ${heading}
             </h>
             <div>
              ${date}
