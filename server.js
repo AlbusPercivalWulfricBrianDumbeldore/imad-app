@@ -41,7 +41,14 @@ function createTemplate(data){
             </title>
              <meta name="viewport" content="width=device-width, initial scale=1"/>
               <style>
-                <link href="/ui/style.css" rel="stylesheet" />
+               .container{
+                 max-width: 800px;
+                 margin: 0 auto;
+                 color: #29d029;
+                 font-family: algerian;
+                 padding-top: 1000px;
+                 padding-left: 40px;
+                 padding-right: 40px;}
              </style>
             </head>
              <body>
