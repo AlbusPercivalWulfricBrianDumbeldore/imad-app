@@ -1,23 +1,15 @@
-console.log('Loaded!');
-
-//Change the text of main-text div
-var element = document.getElementById('main-text');
-
-element.innerHTML='new value';
-
-//Change the text of main-text div
-var element = document.getElementById('main-text');
-
-element.innerHTML='new value';
-
-// Move the Image
-var img= document.getElementById('pic');
-var leftMargin=0;
-function moveRight(){
-    leftMargin=leftMargin+50;
-    img.style.leftMargin=leftMargin+ "px";
-}
-img.onclick= function(){
-    var interval=setInterval(moveRight, 10);
+//Counter code
+var button=document.getElementById("join");
+var counter=0;
+button.onclick= function(){
+    
+    // Make a request to the counter endpoint
+    
+    //Capture the response and state it in a variable
+    
+    //Render the variable in the correct span
+    counter= counter+1;
+    var span= document.getElementById("count");
+    span.innerHTMl=counter.toString();
+    
 };
-   
