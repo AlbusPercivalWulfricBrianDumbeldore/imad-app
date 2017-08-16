@@ -3,13 +3,22 @@ var button=document.getElementById("Counter");
 var counter=0;
 button.onclick= function(){
     
-    // Make a request to the counter endpoint
+    // Create a requset object
+    var request= new XMLHttpRequest();
     
     //Capture the response and state it in a variable
-    
-    //Render the variable in the correct span
-    counter= counter+1;
-    var span= document.getElementById("Count");
-    span.innerHTML=counter.toString();
-    
+    request.onreadystatechange= function(){
+        if (request.readyState === XMLHttpRequest.Done){
+            //Take some action
+            if (request.status===200){
+                var counter= request.responseText;
+                var span=document.getElementById("Count");
+                span.innerHTML=counter.toString();
+            }
+        }
+    };
+  //Make the request  
+  requset.open('GET', 'http://mukulbhatia577.imad.hasura-app.io/counter', true);
+  request.send(null);
+  
 };
